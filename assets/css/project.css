@@ -1,0 +1,80 @@
+:root {
+  --m-f-color: black;
+  --m-bg: linear-gradient(135deg, rgb(147, 177, 166, 0.9) 50%, #000 50%);
+  --s-bg: linear-gradient(
+    135deg,
+    rgb(147, 177, 166, 0.7) 50%,
+    rgb(147, 177, 166, 0.7) 50%
+  );
+  --shadow-color: rgb(147, 177, 166, 0.6);
+  --t-bg: rgb(147, 177, 166, 0.7);
+}
+#project-layout {
+  height: 650px;
+  margin-top: 30px;
+  box-shadow: 0 0 5px 0.6px var(--t-bg);
+}
+#project-layout .row {
+  height: 100%;
+}
+#project-layout .row #project-info {
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 20px;
+}
+#project-layout .row #issues-container {
+  height: 100%;
+  box-sizing: border-box;
+  border-left: 2px solid var(--t-bg);
+}
+#issues-list {
+  height: 90%;
+  overflow-y: auto;
+}
+#issues-list .card {
+  margin-bottom: 20px;
+}
+#issues-list .card-header {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.8) 50%
+  );
+}
+#issues-list .labels-container {
+  padding: 0;
+}
+#issues-list .labels-list .badge {
+  margin-right: 20px;
+  font-size: 1rem;
+}
+.sorting {
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+.sorting .input-group-lg {
+  width: 60%;
+  box-shadow: 0 0 3px 0.6px rgba(0, 145, 255, 0.6);
+  border-radius: 5px;
+}
+.sorting .dropdown-menu {
+  min-width: 120px;
+  background: var(--t-bg);
+}
+.sorting .dropdown-menu li {
+  padding-left: 5px;
+  font-weight: 600;
+}
+.sorting .dropdown-menu li:hover {
+  background-color: rgba(155, 155, 155, 0.7);
+}
+.sorting .dropdown-menu li label {
+  margin-left: 10px;
+}
+@media screen and (max-width: 1200px) {
+  #project-layout {
+    display: flex;
+    flex-direction: column;
+  }
+}

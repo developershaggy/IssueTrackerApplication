@@ -1,0 +1,11 @@
+<div class="card">
+    <h4 class="card-header"><%=project.title%></h4>
+    <div class="card-body">
+      <h5 class="card-title text-success"><span>Author: </span><%=project.author%></h5>
+      <p class="card-text">
+          <%=project.description%>
+      </p>
+      <a href="/project/?projectId=<%=project._id%>" class="btn btn-primary">More Details</a>
+    </div>
+</div>
+

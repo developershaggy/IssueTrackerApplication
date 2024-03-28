@@ -1,0 +1,36 @@
+<div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="project-form-container"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="project-form-label">
+          Add New Project
+        </h4>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <form action="/create-project" method="post" id="project-form">
+            <div class="input-group mb-5">
+                <span class="input-group-text fw-bold text-success" id="inputGroup-sizing-default">Title</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Title Of Project" name="title" aria-describedby="inputGroup-sizing-default" required>
+            </div>
+            <div class="input-group mb-5">
+                <span class="input-group-text fw-bold text-success" id="inputGroup-sizing-default">Author</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" name="author" placeholder="Author Of Project" aria-describedby="inputGroup-sizing-default" required>
+            </div>
+            <div class="form-floating mb-5">
+                <textarea class="form-control" placeholder="" name="description" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2" class="text-success">Description of project</label>
+            </div>
+          <button class="btn btn-primary margin5">Add Project</button>
+        </form>
+      </div>
+</div>
+    

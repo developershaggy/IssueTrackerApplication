@@ -1,0 +1,65 @@
+<!--should be available only when there is a project-->
+
+<%if(locals.project){%>
+  
+    
+<div
+class="offcanvas offcanvas-start"
+tabindex="-1"
+id="issue-form-container"
+aria-labelledby="offcanvasExampleLabel"
+>
+<div class="offcanvas-header">
+  <h4 class="offcanvas-title" id="project-form-label">
+    Create New Issue
+  </h4>
+  <button
+    type="button"
+    class="btn-close text-reset"
+    data-bs-dismiss="offcanvas"
+    aria-label="Close"
+  ></button>
+</div>
+<div class="offcanvas-body">
+  <form action="/project/create-issue" method="post" id="issue-form">
+      <div class="input-group mb-5">
+          <span class="input-group-text fw-bold text-danger" id="inputGroup-sizing-default">Issue Title</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Issue Title" name="title" aria-describedby="inputGroup-sizing-default" required>
+      </div>
+      <div class="input-group mb-5">
+          <span class="input-group-text fw-bold text-danger" id="inputGroup-sizing-default">Name</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" name="name" placeholder="Your Name" aria-describedby="inputGroup-sizing-default" required>
+      </div>
+      <div class="form-floating mb-5">
+          <textarea class="form-control" placeholder="" name="description" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2" class="text-danger">Description of issue</label>
+      </div>
+      <!--for labels-->
+      <h6 class="ms-2 text-danger fw-bold">Labels</h6>
+      <div class="mb-5 labels">
+          <input type="checkbox" id="ui" name="labels" value="UI">
+          <label for="ui">UI</label>
+          <input type="checkbox" id="bug" name="labels" value="Bug">
+          <label for="bug">Bug</label>
+          <input type="checkbox" id="content" name="labels" value="Content">
+          <label for="content">Content</label>
+          <input type="checkbox" id="latency" name="labels" value="Latency">
+          <label for="latency">Latency</label>
+          <input type="checkbox" id="other" name="labels" value="Other">
+          <label for="other">Other</label>
+      </div>
+    <!--we need the project id to attach this issue to that project-->
+    <input type="hidden" name="project" value="<%=project._id%>">
+    <button class="btn btn-danger margin5">Add Issue</button>
+  </form>
+</div>
+</div>
+
+
+  
+  
+
+
+
+
+<%}%>

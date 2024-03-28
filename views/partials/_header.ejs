@@ -1,0 +1,36 @@
+
+<!--nav bar from bootstrap-->
+<nav class="navbar">
+    <div class="container-fluid">
+      <a href="/">
+        <img src="/images/logo.png" alt="Logo" width="80px"/>
+      </a>
+      <!--if home page, create project-->
+      <%if(locals.title=="Issue Tracker Home"){%>
+        <button 
+              class="btn btn-success margin5" 
+              type="button" 
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#project-form-container" 
+              aria-controls="offcanvasExample"
+         >
+          + Create Project
+        </button>
+      <!--if project page, create a new issue-->
+      <%}else{%>
+          <button 
+              class="btn btn-danger margin5" 
+              type="button" 
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#issue-form-container" 
+              aria-controls="offcanvasExample"
+          >
+            + Create Issue
+          </button>
+      <%}%>
+    </div>
+  </nav>
+
+<%-include('./_project-form.ejs')-%>
+<%-include('./_issue-form.ejs')-%>
+

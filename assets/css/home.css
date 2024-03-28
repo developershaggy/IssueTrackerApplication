@@ -1,0 +1,38 @@
+:root {
+  --m-f-color: black;
+  --m-bg: linear-gradient(135deg, #93b1a6 50%, #000 50%);
+  --s-bg: linear-gradient(135deg, #93b1a6 50%, rgba(0, 0, 0, 0.7) 50%);
+  --shadow-color: rgba(142, 225, 123, 0.6);
+  --t-bg: rgba(108, 224, 108, 0.7);
+}
+#project-container {
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+}
+#project-container .card {
+  border: none;
+  width: 99%;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0 0 5px 0.7px var(--shadow-color);
+}
+#project-container .card .card-header {
+  background: var(--s-bg);
+}
+#project-container .card h4,
+#project-container .card h5 {
+  font-weight: 700;
+}
+#project-container #project-list {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+#project-container .sort-project .dropdown-menu {
+  min-width: 120px;
+  background: var(--t-bg);
+}
+#project-container .sort-project .dropdown-menu .dropdown-item {
+  font-weight: 600;
+}

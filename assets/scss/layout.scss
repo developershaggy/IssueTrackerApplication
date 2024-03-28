@@ -1,0 +1,40 @@
+
+.message{
+    margin-top: 50px;
+    font-size: 80px;
+}
+
+.navbar{
+    background:linear-gradient(135deg,rgba(108, 224, 108, 0.9) 50%,rgb(0, 0, 0) 50%);
+    .container-fluid{
+        padding: 0 50px 0px 30px;
+        img{
+            border-radius: 10px;
+            &:hover{
+               cursor: pointer;
+            }
+            &:active{
+                transform: scale(1.05);
+            }
+        }
+
+        button{
+            &:active{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+
+#project-form-container{
+    width: 550px;
+ 
+    .offcanvas-header{
+       .btn-close{
+          &:hover{
+             transform: scale(1.2);
+          }
+       }
+    }
+ }

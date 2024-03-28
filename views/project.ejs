@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/css/project.css">
+
+<div class="container" id="project-layout">
+    <div class="row">
+      <div class="col-4  rounded " id="project-info">
+        <h1 class="mb-5 text-success"><u><%=project.title%></u></h1>
+        <h4 class="mb-5 text-success-emphasis"><u>Author:</u> <%=project.author%></h4> 
+        <h4><u>Description:</u></h4>
+        <div>
+            <p><%=project.description%></p>
+        </div>  
+      </div>
+      <div class="col-8" id="issues-container">
+        <div>
+            <div class="d-flex justify-content-evenly align-items-center sorting">
+              <h2 class="text-danger">Issues</h2>
+              <div class="input-group input-group-lg">
+                <input type="text" class="form-control" id="search-by-word" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search by title/author/description">
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Labels
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <input type="checkbox" class="filter-cb" id="ui" name="labels" value="UI">
+                    <label for="ui">UI</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" class="filter-cb" id="content" name="labels" value="Content">
+                    <label for="content">Content</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" class="filter-cb" id="bug" name="labels" value="Bug">
+                    <label for="bug">Bug</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" class="filter-cb" id="latency" name="labels" value="Latency">
+                    <label for="latency">Latency</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" class="filter-cb" id="other" name="labels" value="Other">
+                    <label for="other">Other</label>
+                  </li>
+                </ul>
+              </div>
+              <button id="show-all-issues" class="btn btn-primary">Show All</button>
+            </div>
+        </div>
+          <div id="issues-list"  data-issues="<%=JSON.stringify(project.issues)%>">
+            <%if(project.issues.length>0){%>
+              
+            <%}else{%>
+                <%-include('partials/_nothingtoshow')%>
+            <%}%>
+          </div> 
+      </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="/js/project.js"></script>
